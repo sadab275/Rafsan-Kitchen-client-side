@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -33,6 +34,7 @@ const Login = () => {
 
                         </div>
                     </form>
+                    <p>New to Rafsan's kitchen? <Link className='text-orange-600 font-bold' to='/signup'>Sign Up</Link></p>
                 </div>
             </div>
         </div>
