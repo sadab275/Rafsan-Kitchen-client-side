@@ -22,7 +22,7 @@ const Header = () => {
                 </div>
                 <Link to='/' className="btn btn-ghost normal-case text-xl">
                     <img className='w-10 h-30' src={logo} alt="" />
-                    <a href='/' className='ml-5' href="">Rafsan's Kitchen</a>
+                    <a className='ml-5' href="/">Rafsan's Kitchen</a>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
