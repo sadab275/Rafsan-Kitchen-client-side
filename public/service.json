@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "image": "https://fastly.4sqi.net/img/general/600x600/124554_yiR4QjsrOLrrYvZLPCGoC89vTJKCDIQKmKDAgbhHj-0.jpg",
+        "name": "Mejbani Beef",
+        "price": "500 bdt",
+        "description": "Mejbani Beef tastes authentic chittagonian mejbani beef and provides all the same materials"
+    },
+    {
+        "id": 2,
+        "image": "https://img-global.cpcdn.com/recipes/2cca2e5dd84f3d3c/1200x630cq70/photo.jpg",
+        "name": "Beef Kalabhuna",
+        "price": "500 bdt",
+        "description": "Mejbani Beef tastes authentic chittagonian mejbani beef and provides all the same materials"
+    },
+    {
+        "id": 3,
+        "image": "https://i.ytimg.com/vi/mzcWlgbN-zI/sddefault.jpg",
+        "name": "Nola Neheri",
+        "price": "500 bdt",
+        "description": "Mejbani Beef tastes authentic chittagonian mejbani beef and provides all the same materials"
+    },
+    {
+        "id": 4,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReqEEr-XGb3i0e77nDlff8aRafN02JDcv-Yw&usqp=CAU",
+        "name": "Chonar dail",
+        "price": "500 bdt",
+        "description": "Mejbani Beef tastes authentic chittagonian mejbani beef and provides all the same materials"
+    },
+    {
+        "id": 5,
+        "image": "https://www.bigbasket.com/media/uploads/recipe/w-l/1068_1.jpg",
+        "name": "Mutton Resala",
+        "price": "500 bdt",
+        "description": "Mejbani Beef tastes authentic chittagonian mejbani beef and provides all the same materials"
+    },
+    {
+        "id": 6,
+        "image": "https://cdn.shopify.com/s/files/1/1773/5397/articles/Pan_Fried_Chicken_Salad_V6_Web_458a22d8-d57c-4d3a-a125-378cb61df16f_1500x.jpg?v=1632934092",
+        "name": "Honey Chicken Salad",
+        "price": "500 bdt",
+        "description": "Mejbani Beef tastes authentic chittagonian mejbani beef and provides all the same materials"
+    }
+]
