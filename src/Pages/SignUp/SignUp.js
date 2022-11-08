@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import { FaGoogle } from 'react-icons/fa';
 
 const SignUp = () => {
 
@@ -50,6 +51,10 @@ const SignUp = () => {
 
                         </div>
                     </form>
+
+                    <button className='flex  justify-center btn btn-outline'>Sign In with <FaGoogle className='ml-1 '></FaGoogle> </button>
+
+
                     <p>Already have an account? <Link className='text-orange-600 font-bold' to='/login'>Login</Link></p>
                 </div>
             </div>
