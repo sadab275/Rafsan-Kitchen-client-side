@@ -3,7 +3,7 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const ReviewCard = ({ revie }) => {
     const { user } = useContext(AuthContext)
-    console.log(user);
+    console.log('review', user?.photoURL);
     const { customer, review, price } = revie;
     return (
         <div>
