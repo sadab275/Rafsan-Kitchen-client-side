@@ -10,7 +10,7 @@ const ServiceCard = ({ service }) => {
                 <p className='text-success'>{description.slice(0, 100)}</p>
                 <p className='text-2xl text-orange-500 font-semibold'>Price: {price} BDT</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <button className="btn btn-primary">View Details</button>
                 </div>
             </div>
         </div>
