@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ReviewCard from '../ReviewCard/ReviewCard';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const ServiceDetails = () => {
     const { _id, image, name, price, description } = useLoaderData();
@@ -58,7 +60,15 @@ const ServiceDetails = () => {
         <div>
             <div>
                 <div className="card card-compact w-96  bg-base-100 shadow-xl ">
-                    <figure><img className='w-full h-40' src={image} alt="Shoes" /></figure>
+                    <figure>
+                        <PhotoProvider>
+                            <PhotoView src={image}>
+                                <img className='w-full h-40' src={image} alt="Shoes" />
+                            </PhotoView>
+                        </PhotoProvider>
+
+                    </figure>
+
                     <div className="card-body">
                         <h2 className="card-title text-green-500 font-bold">{name}</h2>
                         <p className='text-success'>{description}</p>

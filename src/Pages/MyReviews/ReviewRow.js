@@ -34,7 +34,7 @@ const ReviewRow = ({ order, handleDelete }) => {
             </td>
             <td>{serviceName}</td>
             <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                <button className="btn btn-ghost btn-xs">Edit</button>
             </th>
         </tr>
     );

@@ -37,35 +37,42 @@ const Myreviews = () => {
     return (
         <div>
             <h2 className='text-5xl text-center font-bold text-green-700 mb-5'>My Reviews {orders.length}</h2>
-            <div className="overflow-x-auto w-full">
-                <table className="table w-full">
+            {
+                orders.length < 1 ?
+                    <h1 className='text-5xl'>No Reviews were added</h1>
+                    :
+                    <div className="overflow-x-auto w-full">
+                        <table className="table w-full">
 
-                    <thead>
-                        <tr>
-                            <th>
-                                <label>
-                                    <input type="checkbox" className="checkbox" />
-                                </label>
-                            </th>
-                            <th>Name</th>
-                            <th>Review</th>
-                            <th>Service Name</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            orders.map(order => <ReviewRow
-                                key={order._id}
-                                order={order}
-                                handleDelete={handleDelete}
-                            ></ReviewRow>)
-                        }
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <label>
+                                            <input type="checkbox" className="checkbox" />
+                                        </label>
+                                    </th>
+                                    <th>Name</th>
+                                    <th>Review</th>
+                                    <th>Service Name</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    orders.map(order => <ReviewRow
+                                        key={order._id}
+                                        order={order}
+                                        handleDelete={handleDelete}
+                                    ></ReviewRow>)
+                                }
 
 
-                    </tbody>
-                </table>
-            </div>
+                            </tbody>
+                        </table>
+                    </div>
+
+            }
+
             <ToastContainer />
         </div>
     );
