@@ -1,9 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import ReviewCard from '../ReviewCard/ReviewCard';
 
 const ServiceDetails = () => {
     const { _id, image, name, price, description } = useLoaderData();
+    const [reviews, setReviews] = useState([]);
     const { user } = useContext(AuthContext);
 
 
@@ -22,6 +24,7 @@ const ServiceDetails = () => {
             customer: username,
             email,
             review
+
         }
         console.log(reviewDetails);
 
@@ -44,6 +47,12 @@ const ServiceDetails = () => {
 
     }
 
+    useEffect(() => {
+        fetch('http://localhost:5000/reviews')
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
+
 
     return (
         <div>
@@ -59,6 +68,19 @@ const ServiceDetails = () => {
 
                 </div>
             </div>
+
+            <div>
+                <h2 className='text-5xl text-center font-bold text-green-700 mb-5'> See all reviews {reviews.length}</h2>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+                    {
+                        reviews.map(revie => <ReviewCard
+                            key={revie.id}
+                            revie={revie}
+                        ></ReviewCard>)
+                    }
+                </div>
+            </div>
+
             <div>
                 <h2 className='text-5xl text-center font-bold text-green-700 mb-5'>Review Section for : {name}</h2>
 
