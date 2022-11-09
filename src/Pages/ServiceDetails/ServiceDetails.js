@@ -4,11 +4,14 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ReviewCard from '../ReviewCard/ReviewCard';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import useTitle from '../../hooks/useTitle';
 
 const ServiceDetails = () => {
     const { _id, image, name, price, description } = useLoaderData();
     const [reviews, setReviews] = useState([]);
     const { user } = useContext(AuthContext);
+
+    useTitle('ServiceDetails');
 
 
     const handlePlaceReview = event => {

@@ -3,12 +3,15 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ReviewRow from './ReviewRow';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from '../../hooks/useTitle';
 
 
 
 const Myreviews = () => {
     const { user } = useContext(AuthContext);
     const [orders, setOrders] = useState([]);
+
+    useTitle('Myreviews');
 
     useEffect(() => {
         fetch(`http://localhost:5000/reviews?email=${user?.email}`)

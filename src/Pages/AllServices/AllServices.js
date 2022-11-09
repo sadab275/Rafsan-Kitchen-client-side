@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 import ServiceCard from '../Home/Services/ServiceCard';
 
 const AllServices = () => {
@@ -9,6 +10,8 @@ const AllServices = () => {
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
+
+    useTitle('AllServices');
     return (
         <div className='my-10'>
             <div className='text-center'>
