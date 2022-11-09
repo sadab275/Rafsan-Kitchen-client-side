@@ -1,14 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
-const ReviewRow = ({ order }) => {
+const ReviewRow = ({ order, handleDelete }) => {
     const { user } = useContext(AuthContext);
-    const { serviceName, customer, review } = order;
+    const { _id, serviceName, customer, review } = order;
+
+
+
     return (
         <tr>
             <th>
                 <label>
-                    <input type="checkbox" className="checkbox" />
+                    <button onClick={() => handleDelete(_id)} className='btn btn-ghost'>X</button>
                 </label>
             </th>
             <td>
