@@ -39,7 +39,7 @@ const router = createBrowserRouter([
             {
                 path: '/servicedetails/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/servicedetails/${params.id}`)
+                loader: ({ params }) => fetch(`https://sadabs-kitchen-server.vercel.app/servicedetails/${params.id}`)
             },
             {
                 path: '/myreviews',
