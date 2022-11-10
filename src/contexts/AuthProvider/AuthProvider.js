@@ -11,11 +11,21 @@ const AuthProvider = ({ children }) => {
 
     const createUser = (email, password) => {
         setLoading(true);
+        <button type="button" class="bg-indigo-500 ..." disabled>
+            <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
+            </svg>
+            Processing...
+        </button>
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
     const login = (email, password) => {
         setLoading(true);
+        <button type="button" class="bg-indigo-500 ..." disabled>
+            <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
+            </svg>
+            Processing...
+        </button>
         return signInWithEmailAndPassword(auth, email, password);
     }
 

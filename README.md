@@ -1,3 +1,70 @@
+Website Name : Rafsan's Kitchen
+Live Link : 
+Website overview: It as a website for an individual chef. Many kinds of recipes are added over there. Throughout that a person or a visitor can see all the menue and give a review also see others reviews.
+
+Functionality:
+* Front-end created with React.js, CSS, TailwindCSS, DaisyUi.
+* Backend created with MongoDB.
+* From home component a user can see the recipes anda also go to the order details page.
+* In order details page a visitor can see all of the informations of the specific recipe and also the reviews provided by other visitors about the recipe
+* There is also a review section where a person can post their own reviews but he or she needs to login first unless can't give e review.
+* Also a user can see all of his review in My review section from navbar but needs to login first.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -20,6 +20,7 @@ const Header = () => {
             user?.email &&
             <>
                 <li><Link to='/myreviews'>My Reviews</Link> </li>
+                <li><Link to='/addservices'>Add Services</Link> </li>
                 <li><Link><button onClick={handleLogOut}> Sign Out</button></Link> </li>
             </>
 
@@ -48,9 +49,9 @@ const Header = () => {
                     {menuitems}
                 </ul>
             </div>
-            <div className="navbar-end">
+            {/* <div className="navbar-end">
                 <a className="btn">Get started</a>
-            </div>
+            </div> */}
         </div>
     );
 };
