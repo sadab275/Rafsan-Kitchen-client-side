@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ReviewCard from '../ReviewCard/ReviewCard';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
@@ -95,22 +95,33 @@ const ServiceDetails = () => {
             </div>
 
             <div>
-                <h2 className='text-5xl text-center font-bold text-green-700 mb-5'>Review Section for : {name}</h2>
+                <h2 className='text-5xl text-center font-bold text-green-700 mb-5 my-10'>Review Section for : {name}</h2>
 
-                <form onSubmit={handlePlaceReview}>
-                    <div className='grid grid-cols-1 lg:grid-cols-1 gap-4'>
-                        {/* <input type="text" placeholder="Your review" className="input input-ghost w-full input-bordered" /> */}
-                        <input name='name' type="text" placeholder="Your name" className="input input-ghost w-full input-bordered" required />
-                        <input name='email' type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost w-full input-bordered" readOnly />
-                    </div>
-                    <textarea name='review' className="textarea textarea-bordered h-24 w-full" placeholder="Your Review" required></textarea>
+                {
+                    user?.email ?
+                        <form onSubmit={handlePlaceReview}>
+                            <div className='grid grid-cols-1 lg:grid-cols-1 gap-4'>
+                                {/* <input type="text" placeholder="Your review" className="input input-ghost w-full input-bordered" /> */}
+                                <input name='name' type="text" placeholder="Your name" className="input input-ghost w-full input-bordered" required />
+                                <input name='email' type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost w-full input-bordered" readOnly />
+                            </div>
+                            <textarea name='review' className="textarea textarea-bordered h-24 w-full" placeholder="Your Review" required></textarea>
 
-                    <input className='btn btn-primary' type="submit" value="Place your Review" />
-                </form>
+                            <input className='btn btn-primary' type="submit" value="Place your Review" />
+                        </form>
+                        :
+                        <>
+                            <h1 className='text-3xl text-center my-5'>To add review ,Please <Link to='/login' className='text-orange-600 font-bold'>login</Link>  first</h1>
+                        </>
+                }
 
-            </div>
 
-        </div>
+
+
+
+            </div >
+
+        </div >
     );
 };
 

@@ -4,7 +4,7 @@ import img from '../../assets/aboutimg.jpg'
 const About = () => {
     return (
         <div className='mb-5'>
-            <h2 className='text-4xl text-center text-cyan-400 font-bold'>About Us</h2>
+            <h2 className='text-4xl text-center text-cyan-400 font-bold my-5'>About Us</h2>
             <div className="hero min-h-screen bg-base-200">
 
                 <div className="hero-content flex-col lg:flex-row">
